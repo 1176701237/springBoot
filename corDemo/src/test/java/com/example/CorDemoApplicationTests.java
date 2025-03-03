@@ -1,10 +1,10 @@
-package com.example.hxdemo;
+package com.example;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HxDemoApplicationTests {
+class CorDemoApplicationTests {
 
 	@Test
 	void contextLoads() {

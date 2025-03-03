@@ -1,13 +1,13 @@
-package com.example.hxdemo;
+package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HxDemoApplication {
+public class RedisDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HxDemoApplication.class, args);
+		SpringApplication.run(RedisDemoApplication.class, args);
 	}
 
 }
