@@ -8,27 +8,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>commonDemo</name>
     <description>commonDemo</description>
-    <packaging>jar</packaging>
-
+    <url>http://maven.apache.org</url>
     <parent>
         <groupId>com.example</groupId>
         <artifactId>springBootDemo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
     <properties>
         <java.version>1.8</java.version>
         <slf4j.version>1.6.6</slf4j.version>
@@ -82,14 +68,4 @@
 <!--        </dependency>-->
 
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>

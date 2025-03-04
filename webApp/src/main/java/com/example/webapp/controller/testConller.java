@@ -2,7 +2,6 @@ package com.example.webapp.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-
 import com.example.cordemo.model.mapper.TblPayBillinfoMapper;
 import com.example.cordemo.model.model.TblPayBillinfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.time.LocalDate;
+
 
 /**
  * Created with IntelliJ IDEA.
@@ -66,7 +66,7 @@ public class testConller {
         int one = tblPayBillinfoMapper.insert(tblPayBillinfo);
 
         tblPayBillinfoMapper.selectList(null);
-        QueryWrapper<TblPayBillinfo> wrapper = new  QueryWrapper<>();
+        QueryWrapper<TblPayBillinfo> wrapper = new QueryWrapper<>();
         wrapper.eq("billNo", "1");
         TblPayBillinfo tblPayBillinfo1 = tblPayBillinfoMapper.selectOne(wrapper);
         System.out.println(tblPayBillinfo1);

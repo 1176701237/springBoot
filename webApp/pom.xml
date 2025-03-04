@@ -3,74 +3,86 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- 项目基本信息 -->
     <groupId>com.example</groupId>
     <artifactId>webApp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>webApp</name>
     <description>webApp</description>
+    <url>http://maven.apache.org</url>
+    <packaging>jar</packaging>
 
-
+    <!-- 父项目信息 -->
     <parent>
         <groupId>com.example</groupId>
         <artifactId>springBootDemo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
+    <!-- 项目属性，用于统一管理版本号 -->
     <properties>
         <java.version>1.8</java.version>
+        <spring-boot.version>2.7.12</spring-boot.version>  <!-- 统一管理 Spring Boot 相关依赖版本 -->
+        <mybatis-spring.version>2.1.1</mybatis-spring.version>  <!-- 统一管理 MyBatis Spring 版本 -->
     </properties>
+
+    <!-- 依赖管理 -->
     <dependencies>
+        <!-- Spring Boot Web 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
 
+        <!-- Spring Boot Tomcat 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
+
+        <!-- Spring Boot Test 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot.version}</version>
             <scope>test</scope>
         </dependency>
 
-
+        <!-- serviceDemo 依赖 -->
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>serviceDemo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+
         </dependency>
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>corDemo</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+
         </dependency>
+        <!-- MyBatis Spring 依赖 -->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
-            <version>2.1.1</version>
+            <version>${mybatis-spring.version}</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
 
+    <!-- 构建插件配置 -->
     <build>
         <plugins>
+            <!-- Spring Boot Maven 插件 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <classifier>exec</classifier> <!-- 分离普通JAR和可执行JAR -->
+                </configuration>
+                <version>${spring-boot.version}</version>
             </plugin>
         </plugins>
     </build>
