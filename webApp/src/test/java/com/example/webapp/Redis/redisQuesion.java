@@ -92,11 +92,14 @@ public class redisQuesion {
         adminExample2.createCriteria().andUsernameEqualTo(adminAfter.getUsername());
         List<Admin> adminsAfter = adminMapper.selectByExample(adminExample2);
         System.out.println("adminAfter:"+ JSON.toJSON(adminsAfter));
-        ;
-        //更新缓存
+        Thread.sleep(1000);
+        //更新缓存或删除缓存
         Admin adminRedisAfter = adminsAfter.get(0);
         myRedisTemplateServiceDao.set("admin", JSON.toJSONString(adminRedisAfter));
         System.out.println("adminAfterRedis:"+myRedisTemplateServiceDao.get("admin"));
+        myRedisTemplateServiceDao.delete("admin");
+        String adminRedisDeleteAfter = myRedisTemplateServiceDao.get("admin");
+        System.out.println("adminRedisDeleteAfter:"+adminRedisDeleteAfter);
 
 
     }
