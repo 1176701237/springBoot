@@ -1,10 +1,9 @@
 package com.example.webapp.controller;
 
-import com.alibaba.fastjson.JSON;
+
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.example.cordemo.model.mapper.AdminMapper;
+
 import com.example.cordemo.model.mapper.TblPayBillinfoMapper;
-import com.example.cordemo.model.model.Admin;
 import com.example.cordemo.model.model.TblPayBillinfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -27,8 +26,8 @@ import java.time.LocalDate;
 public class testConller {
     @Resource
     private StringRedisTemplate stringRedisTemplate;
-    @Resource
-    private AdminMapper adminDAO;
+//    @Resource
+//    private AdminMapper adminDAO;
     @Autowired
     private TblPayBillinfoMapper tblPayBillinfoMapper;
 
@@ -41,15 +40,15 @@ public class testConller {
         String hello = stringRedisTemplate.opsForValue().get("hello");
         System.out.println(hello);
 
-        Admin admin = new Admin();
-        admin.setUsername("admin");
-        admin.setPassword("admin");
-        admin.setId(1);
-        admin.setAdmintype(1);
-        stringRedisTemplate.opsForValue().set("admin", JSON.toJSONString(admin));
-        String adminString = stringRedisTemplate.opsForValue().get("admin");
-        System.out.println(adminString);
-
+//        Admin admin = new Admin();
+//        admin.setUsername("admin");
+//        admin.setPassword("admin");
+//        admin.setId(1);
+//        admin.setAdmintype(1);
+//        stringRedisTemplate.opsForValue().set("admin", JSON.toJSONString(admin));
+//        String adminString = stringRedisTemplate.opsForValue().get("admin");
+//        System.out.println(adminString);
+//
 
         TblPayBillinfo tblPayBillinfo = new TblPayBillinfo();
         tblPayBillinfo.setBillNo("1");

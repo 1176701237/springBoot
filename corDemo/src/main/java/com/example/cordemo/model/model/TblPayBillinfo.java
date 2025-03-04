@@ -91,4 +91,147 @@ public class TblPayBillinfo implements Serializable {
     @TableField("EMP_NO")
     private String empNo;
 
+    public LocalDate getDateSsn() {
+        return dateSsn;
+    }
+
+    public void setDateSsn(LocalDate dateSsn) {
+        this.dateSsn = dateSsn;
+    }
+
+    public String getSsnPlt() {
+        return ssnPlt;
+    }
+
+    public void setSsnPlt(String ssnPlt) {
+        this.ssnPlt = ssnPlt;
+    }
+
+    public Short getSubSeq() {
+        return subSeq;
+    }
+
+    public void setSubSeq(Short subSeq) {
+        this.subSeq = subSeq;
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getOrgCode() {
+        return orgCode;
+    }
+
+    public void setOrgCode(String orgCode) {
+        this.orgCode = orgCode;
+    }
+
+    public String getBillNo() {
+        return billNo;
+    }
+
+    public void setBillNo(String billNo) {
+        this.billNo = billNo;
+    }
+
+    public Long getShyzAmt() {
+        return shyzAmt;
+    }
+
+    public void setShyzAmt(Long shyzAmt) {
+        this.shyzAmt = shyzAmt;
+    }
+
+    public String getMailCity() {
+        return mailCity;
+    }
+
+    public void setMailCity(String mailCity) {
+        this.mailCity = mailCity;
+    }
+
+    public String getReceCity() {
+        return receCity;
+    }
+
+    public void setReceCity(String receCity) {
+        this.receCity = receCity;
+    }
+
+    public String getMailName() {
+        return mailName;
+    }
+
+    public void setMailName(String mailName) {
+        this.mailName = mailName;
+    }
+
+    public String getReceName() {
+        return receName;
+    }
+
+    public void setReceName(String receName) {
+        this.receName = receName;
+    }
+
+    public String getMailInfo() {
+        return mailInfo;
+    }
+
+    public void setMailInfo(String mailInfo) {
+        this.mailInfo = mailInfo;
+    }
+
+    public String getReceInfo() {
+        return receInfo;
+    }
+
+    public void setReceInfo(String receInfo) {
+        this.receInfo = receInfo;
+    }
+
+    public String getBaseProductid() {
+        return baseProductid;
+    }
+
+    public void setBaseProductid(String baseProductid) {
+        this.baseProductid = baseProductid;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getEmpName() {
+        return empName;
+    }
+
+    public void setEmpName(String empName) {
+        this.empName = empName;
+    }
+
+    public String getEmpNo() {
+        return empNo;
+    }
+
+    public void setEmpNo(String empNo) {
+        this.empNo = empNo;
+    }
 }

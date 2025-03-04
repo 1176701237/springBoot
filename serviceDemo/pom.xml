@@ -34,10 +34,6 @@
     <dependencies>
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>corDemo</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.example</groupId>
             <artifactId>commonDemo</artifactId>
         </dependency>
     </dependencies>
